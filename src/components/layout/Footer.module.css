@@ -1,0 +1,10 @@
+footer {
+  background-color: #322a00;
+  box-shadow: 0 -5px 30px #f0be01;
+  display: flex;
+  justify-content: center;
+}
+
+span {
+  color: #f0e29f;
+}

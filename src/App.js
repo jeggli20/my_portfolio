@@ -3,9 +3,7 @@ import Layout from "./components/layout/Layout";
 const App = () => {
   return (
     <Layout>
-      <main>
-        <h1>Jacob Eggli</h1>
-      </main>
+      <main style={{ color: "#f0e29f" }}>Test</main>
     </Layout>
   );
 };
