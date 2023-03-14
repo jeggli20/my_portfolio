@@ -1,18 +1,16 @@
-import { useState } from "react";
+import { useContext } from "react";
 
+import NavContext from "../../store/nav-context";
 import classes from "./Hamburger.module.css";
 
 const Hamburger = () => {
-  const [isClicked, setIsClicked] = useState("false");
-  const hamburgerEventHandler = () => {
-    setIsClicked(!isClicked);
-  };
+  const navCtx = useContext(NavContext);
 
   return (
     <div
       id={classes.hamburger}
-      className={`${isClicked ? classes.open : ""}`}
-      onClick={hamburgerEventHandler}
+      className={`${navCtx.isClicked ? classes.open : ""}`}
+      onClick={navCtx.onClick}
     >
       <span></span>
       <span></span>
