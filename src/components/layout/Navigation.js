@@ -21,7 +21,7 @@ const Navigation = () => {
         </li>
         <li className={classes["nav-item"]}>
           <a className={classes["nav-link"]} href="#">
-            Portfolio
+            Projects
           </a>
         </li>
         <li className={classes["nav-item"]}>
@@ -29,11 +29,11 @@ const Navigation = () => {
             Contact
           </a>
         </li>
-        <li className={classes["nav-item"]}>
+        {/* <li className={classes["nav-item"]}>
           <a className={classes.resume} href="#">
             Resume
           </a>
-        </li>
+        </li> */}
       </ul>
     </nav>
   );

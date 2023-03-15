@@ -9,7 +9,6 @@ export const NavContextProvider = (props) => {
   const [isClicked, setIsClicked] = useState(false);
 
   const hamburgerHandler = () => {
-    console.log("Yup");
     setIsClicked(!isClicked);
   };
 

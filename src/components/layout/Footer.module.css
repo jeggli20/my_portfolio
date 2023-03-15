@@ -1,10 +1,12 @@
+@import "../../global.css";
+
 footer {
-  background-color: #322a00;
-  box-shadow: 0 -5px 30px #f0be01;
+  background-color: var(--darker);
+  box-shadow: 0 -5px 30px var(--darkest);
   display: flex;
   justify-content: center;
 }
 
 span {
-  color: #f0e29f;
+  color: var(--dark);
 }

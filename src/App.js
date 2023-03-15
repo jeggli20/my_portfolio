@@ -1,9 +1,12 @@
 import Layout from "./components/layout/Layout";
+import About from "./components/sections/About";
+import WorkExperience from "./components/sections/WorkExperience";
 
 const App = () => {
   return (
     <Layout>
-      <main style={{ color: "#f0e29f" }}>Test</main>
+      <About />
+      <WorkExperience />
     </Layout>
   );
 };

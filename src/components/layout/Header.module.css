@@ -1,24 +1,23 @@
+@import "../../global.css";
+
 header {
   align-items: center;
-  background-color: rgba(50, 42, 0, 0.8);
-  box-shadow: 0 5px 30px #f0be01;
+  background-color: rgba(50, 50, 50, 0.8);
+  box-shadow: 0 5px 30px var(--darkest);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 1rem 2rem;
+  padding: 1rem;
 }
 
 .logo {
+  border-right: 1px solid var(--darkest);
+  padding-right: 20%;
   width: 50px;
 }
 
-.name-container {
-  background-color: rgba(35, 35, 35, 0.6);
-  border-radius: 50%;
-  box-shadow: 0 5px 500px #f0cd00;
-  height: 1000px;
-}
-
-.name-container h1 {
-  text-align: center;
+@media screen and (max-width: 639px) {
+  header {
+    justify-content: space-between;
+  }
 }

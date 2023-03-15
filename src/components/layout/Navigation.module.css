@@ -1,38 +1,37 @@
+@import "../../global.css";
+
 .nav {
   list-style-type: none;
 }
 
 .nav-item {
-  /* box-sizing: border-box; */
-  /* display: inline; */
-  /* margin: 0 1rem; */
 }
 
 .nav-link:link,
 .resume:link {
-  color: #f0e29f;
+  color: var(--dark);
   font-size: 1rem;
   text-decoration: none;
 }
 
 .nav-link:visited,
 .resume:visited {
-  color: #f0e29f;
+  color: var(--dark);
 }
 
 .nav-link:hover,
 .resume:hover {
-  color: #f0cd00;
+  color: var(--darkest);
 }
 
 .resume {
-  border: 1px solid #f0e29f;
+  border: 1px solid var(--dark);
   border-radius: 5px;
   padding: 0.5rem;
 }
 
 .resume:hover {
-  border: 1px solid #f0cd00;
+  border: 1px solid var(darkest);
 }
 
 @media screen and (max-width: 639px) {
@@ -47,7 +46,7 @@
     z-index: -10;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(50, 50, 50, 0.8);
     margin: 0;
     padding: 0;
     list-style: none;
@@ -58,7 +57,7 @@
   }
 
   .show {
-    left: 0 !important;
-    z-index: 10 !important;
+    left: 0;
+    z-index: 10;
   }
 }
