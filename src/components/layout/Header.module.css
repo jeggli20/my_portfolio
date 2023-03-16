@@ -2,7 +2,6 @@
 
 header {
   align-items: center;
-  background-color: rgba(50, 50, 50, 0.8);
   box-shadow: 0 5px 30px var(--darkest);
   display: flex;
   flex-direction: row;
@@ -12,8 +11,12 @@ header {
 
 .logo {
   border-right: 1px solid var(--darkest);
-  padding-right: 20%;
+  padding-right: 30%;
   width: 50px;
+}
+
+.darkMode {
+  background-color: rgba(40, 40, 40, 0.8) !important;
 }
 
 @media screen and (max-width: 639px) {

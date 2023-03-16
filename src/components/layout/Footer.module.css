@@ -1,7 +1,6 @@
 @import "../../global.css";
 
 footer {
-  background-color: var(--darker);
   box-shadow: 0 -5px 30px var(--darkest);
   display: flex;
   justify-content: center;
@@ -9,4 +8,8 @@ footer {
 
 span {
   color: var(--dark);
+}
+
+.darkMode {
+  background-color: var(--darker);
 }

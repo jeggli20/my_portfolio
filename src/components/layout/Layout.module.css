@@ -1,1 +1,5 @@
+@import "../../global.css";
 
+.darkMode {
+  background-color: var(--dark) !important;
+}

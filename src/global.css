@@ -2,6 +2,25 @@
   --dark: #666;
   --darker: #333;
   --darkest: #000;
+  --light: #aaa;
+  --lighter: #ccc;
+  --lightest: #eee;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  background-color: rgba(245, 245, 245, 0.8);
+}
+
+main {
+  background-color: var(--light);
+}
+
+footer {
+  background-color: var(--lightest);
 }
 
 button {
