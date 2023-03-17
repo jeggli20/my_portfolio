@@ -4,6 +4,7 @@ import Layout from "./components/layout/Layout";
 import About from "./components/sections/About";
 import WorkExperience from "./components/sections/WorkExperience";
 import Projects from "./components/sections/Projects";
+import Contact from "./components/sections/Contact";
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
         <About />
         <WorkExperience />
         <Projects />
+        <Contact />
       </Layout>
     </LightContextProvider>
   );
