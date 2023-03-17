@@ -3,3 +3,9 @@
 .darkMode {
   background-color: var(--dark) !important;
 }
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

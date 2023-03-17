@@ -4,9 +4,6 @@
   list-style-type: none;
 }
 
-.nav-item {
-}
-
 .nav-link:link,
 .resume:link {
   color: var(--dark);
@@ -46,7 +43,7 @@
     z-index: -10;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(50, 50, 50, 0.8);
+    background-color: rgba(50, 50, 50, 0.9);
     margin: 0;
     padding: 0;
     list-style: none;
