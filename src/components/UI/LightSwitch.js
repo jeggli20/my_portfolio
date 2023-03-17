@@ -10,7 +10,10 @@ const LightSwitch = () => {
   const lightCtx = useContext(LightContext);
 
   return (
-    <div className={classes["light-switch"]}>
+    <div
+      className={classes["light-switch"]}
+      title={lightCtx.isDark ? "Dark Mode" : "Light Mode"}
+    >
       <FontAwesomeIcon
         icon={faLightbulb}
         onClick={lightCtx.onClick}

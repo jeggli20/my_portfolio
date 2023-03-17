@@ -2,6 +2,7 @@
 
 .light-switch {
   align-items: center;
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   margin-left: auto;

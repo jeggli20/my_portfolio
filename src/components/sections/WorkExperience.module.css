@@ -1,9 +1,22 @@
 @import "../../global.css";
 
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-title {
+  margin: 0;
+  width: 90%;
+}
+
 .work-tabs {
   display: flex;
   flex-direction: row;
   overflow-x: auto;
+  width: 100%;
 }
 
 .work-tabs::-webkit-scrollbar {
@@ -18,4 +31,30 @@
   background-color: var(--darkest); /* color of the scroll thumb */
   border-radius: 20px; /* roundness of the scroll thumb */
   border: 3px solid var(--darker); /* creates padding around scroll thumb */
+}
+
+.show {
+  display: flex;
+  flex-direction: column;
+}
+
+.hidden {
+  display: none;
+}
+
+.job-description {
+  margin: 1rem 0 0 0;
+  max-width: 85%;
+}
+
+.job-title {
+  margin: 0;
+}
+
+span {
+  color: var(--darkest);
+}
+
+.job-list {
+  list-style-type: square;
 }
