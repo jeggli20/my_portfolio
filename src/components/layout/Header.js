@@ -1,19 +1,15 @@
-import { Fragment, useContext } from "react";
-
-import LightContext from "../../store/light-context";
+import { Fragment } from "react";
 
 import LightSwitch from "../UI/LightSwitch";
 import Navigation from "./Navigation";
-import logo from "../../img/logo3.png";
-import classes from "./Header.module.css";
+import logo from "../../img/logo1.png";
+import "./Header.css";
 
 const Header = (props) => {
-  const lightCtx = useContext(LightContext);
-
   return (
     <Fragment>
-      <header className={lightCtx.isDark ? classes.darkMode : ""}>
-        <img alt="Logo" className={classes.logo} src={logo} />
+      <header>
+        <img alt="Logo" className={"header-logo"} src={logo} />
         <LightSwitch />
         <Navigation />
       </header>

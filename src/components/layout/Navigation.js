@@ -1,39 +1,34 @@
 import { useContext } from "react";
 
 import NavContext from "../../store/nav-context";
-import classes from "./Navigation.module.css";
+import "./Navigation.css";
 
 const Navigation = () => {
   const navCtx = useContext(NavContext);
 
   return (
-    <nav className={classes.navbar}>
-      <ul className={`${classes.nav} ${navCtx.isClicked ? classes.show : ""}`}>
-        <li className={classes["nav-item"]}>
-          <a className={classes["nav-link"]} href="#">
+    <nav className={"navbar"}>
+      <ul className={`nav ${navCtx.isClicked ? "show" : ""}`}>
+        <li className={"nav-item"}>
+          <a className={"nav-link"} href="#about">
             About
           </a>
         </li>
-        <li className={classes["nav-item"]}>
-          <a className={classes["nav-link"]} href="#">
+        <li className={"nav-item"}>
+          <a className={"nav-link"} href="#work">
             Work Experience
           </a>
         </li>
-        <li className={classes["nav-item"]}>
-          <a className={classes["nav-link"]} href="#">
+        <li className={"nav-item"}>
+          <a className={"nav-link"} href="#projects">
             Projects
           </a>
         </li>
-        <li className={classes["nav-item"]}>
-          <a className={classes["nav-link"]} href="#">
+        <li className={"nav-item"}>
+          <a className={"nav-link"} href="#contact">
             Contact
           </a>
         </li>
-        {/* <li className={classes["nav-item"]}>
-          <a className={classes.resume} href="#">
-            Resume
-          </a>
-        </li> */}
       </ul>
     </nav>
   );

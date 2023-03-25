@@ -5,7 +5,7 @@
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  margin-left: auto;
+  margin: 1rem 1rem 1rem auto;
 }
 
 .lightbulb {
@@ -13,10 +13,11 @@
 }
 
 .off {
-  color: var(--darkest);
+  color: var(--black);
+  filter: drop-shadow(0 0px 3px var(--secondary-color));
 }
 
 .on {
-  color: #fff;
-  filter: drop-shadow(0 0 10px yellow);
+  color: var(--white);
+  filter: drop-shadow(0 0px 3px var(--primary-color));
 }

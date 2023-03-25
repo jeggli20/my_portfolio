@@ -10,14 +10,15 @@
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
   transform: rotate(0deg);
-  -webkit-transition: 0.5s ease-in-out;
-  -moz-transition: 0.5s ease-in-out;
-  -o-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
   cursor: pointer;
   z-index: 20;
-  border: 2px solid #000;
-  background-color: var(--dark);
+  border: 2px solid var(--primary-color);
+  background-color: #fff;
+  box-shadow: 2px 2px 8px var(--black);
 }
 
 #hamburger span {
@@ -25,7 +26,7 @@
   position: absolute;
   height: 3px;
   width: 40%;
-  background: #000;
+  background: var(--primary-color);
   opacity: 1;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
@@ -67,6 +68,7 @@
   -moz-transform: rotate(180deg);
   -o-transform: rotate(180deg);
   transform: rotate(180deg);
+  box-shadow: -2px -2px 8px var(--black);
 }
 
 #hamburger.open span:nth-child(1),
@@ -113,4 +115,13 @@
 #hamburger.open span:nth-child(6) {
   left: calc(50% - 2px);
   top: 28px;
+}
+
+.dark {
+  border-color: var(--secondary-color) !important;
+  background-color: var(--secondary-color-dark) !important;
+}
+
+.dark span {
+  background: var(--secondary-color) !important;
 }

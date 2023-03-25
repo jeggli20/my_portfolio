@@ -1,0 +1,8 @@
+@import "../../global.css";
+
+main {
+  align-items: center;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}

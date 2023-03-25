@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useState, useEffect } from "react";
 
 const LightContext = createContext({
   isDark: true,
@@ -6,9 +6,22 @@ const LightContext = createContext({
 });
 
 export const LightContextProvider = (props) => {
-  const [isDark, setIsDark] = useState(true);
+  const [isDark, setIsDark] = useState(false);
+
+  useEffect(() => {
+    const lightMode = localStorage.getItem("isDark");
+
+    if (lightMode === "1") {
+      setIsDark(true);
+    }
+  }, []);
 
   const switchHandler = () => {
+    if (localStorage.getItem("isDark") === null) {
+      localStorage.setItem("isDark", "1");
+    } else {
+      localStorage.removeItem("isDark");
+    }
     setIsDark(!isDark);
   };
 

@@ -1,0 +1,14 @@
+.section-content > a {
+  text-align: center;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.social-links a {
+  font-size: 3rem;
+  margin: 0.5rem;
+}
