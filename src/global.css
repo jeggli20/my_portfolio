@@ -34,16 +34,16 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+a {
   color: var(--primary-color);
   font-family: "Cousine", monospace;
 }
 
 p,
 span,
-a,
 li {
-  color: var(--primary-color);
+  color: var(--primary-color-dark);
   font-family: "Raleway", sans-serif;
 }
 
@@ -55,6 +55,10 @@ section {
   margin-bottom: 3rem;
   scroll-margin: 85px;
   width: 100%;
+}
+
+a:hover {
+  color: var(--primary-color-light);
 }
 
 .section-title {
@@ -79,7 +83,11 @@ section {
 .dark-mode h4,
 .dark-mode h6,
 .dark-mode a {
-  color: var(--secondary-color-light) !important;
+  color: var(--secondary-color-light);
+}
+
+.dark-mode a:hover {
+  color: var(--secondary-color);
 }
 
 .dark-mode span,
@@ -94,23 +102,25 @@ section {
 }
 
 .dark-mode .section-title {
-  box-shadow: 0 0 10px var(--secondary-color);
+  box-shadow: 0 0 15px var(--secondary-color);
+  background-color: var(--black);
 }
 
 /* ================= Header ================= */
 .dark-mode header {
-  background-color: rgba(0, 0, 0, 0.6) !important;
-  box-shadow: 0px 0px 15px var(--secondary-color) !important;
+  background-color: rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 0px 15px var(--secondary-color);
 }
 
 /* ================= Navigation ================= */
-.dark-mode .nav {
-  background-color: rgba(0, 0, 0, 0.9) !important;
-}
-
 .dark-mode .nav-link:visited,
 .dark-mode .nav-link:link {
-  color: var(--secondary-color) !important;
+  color: var(--secondary-color);
+}
+
+.dark-mode .nav-link:hover,
+.dark-mode .nav-link:active {
+  color: var(--secondary-color-light);
 }
 
 /* ================= Layout ================= */
@@ -124,19 +134,45 @@ section {
 }
 
 /* ================= About ================= */
+.dark-mode .profile-title {
+  border-color: var(--secondary-color-light);
+}
+
 .dark-mode .profile-border {
-  border: 5px solid var(--secondary-color) !important;
+  border: 5px solid var(--secondary-color);
+}
+
+.dark-mode .about-text {
+  border-color: var(--secondary-color-light);
+}
+
+/* ================= Work Experience ================= */
+.dark-mode .work-tabs {
+  background-color: var(--secondary-color-light);
+}
+
+.dark-mode .work-tabs::-webkit-scrollbar-track {
+  background: var(--secondary-color-light); /* color of the tracking area */
+}
+
+.dark-mode .work-tabs::-webkit-scrollbar-thumb {
+  background-color: var(--secondary-color-dark); /* color of the scroll thumb */
 }
 
 /* ================= Projects ================= */
 .dark-mode .project {
-  box-shadow: 3px 3px 10px var(--secondary-color) !important;
+  box-shadow: 3px 3px 10px var(--secondary-color);
+  background-color: var(--secondary-color-dark);
 }
 
 .dark-mode .project-icon:link,
 .dark-mode .project-icon:visited {
-  color: var(--secondary-color);
+  color: var(--secondary-color-light);
   font-size: 2rem;
+}
+
+.dark-mode .project-icon:hover {
+  color: var(--secondary-color);
 }
 
 .dark-mode hr {
@@ -145,22 +181,30 @@ section {
 
 /* ================= Footer ================= */
 .dark-mode footer {
-  background-color: var(--black) !important;
-  box-shadow: 0 0px 15px var(--secondary-color) !important;
+  background-color: var(--black);
+  box-shadow: 0 0px 15px var(--secondary-color);
+}
+
+/* ================= Error Page ================= */
+.dark-mode.error {
+  background-color: var(--black);
+}
+
+.dark-mode.error i {
+  background-color: var(--secondary-color-dark);
+  border-color: var(--secondary-color);
+  color: var(--secondary-color);
 }
 
 /* ================= Button ================= */
 .dark-mode .btn {
-  background-color: var(--secondary-color-dark) !important;
-  border-color: var(--secondary-color) !important;
-  color: var(--secondary-color-light) !important;
+  background-color: var(--secondary-color-dark);
+  border-color: var(--secondary-color);
+  color: var(--secondary-color-light);
 }
 
-/* ================= Scrollbar ================= */
-.dark-mode .work-tabs::-webkit-scrollbar-track {
-  background: var(--secondary-color-dark); /* color of the tracking area */
-}
-
-.dark-mode .work-tabs::-webkit-scrollbar-thumb {
-  background-color: var(--secondary-color); /* color of the scroll thumb */
+@media screen and (max-width: 719px) {
+  .dark-mode .nav {
+    background-color: rgba(0, 0, 0, 0.9) !important;
+  }
 }

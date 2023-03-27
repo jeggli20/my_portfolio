@@ -11,4 +11,13 @@
 .social-links a {
   font-size: 3rem;
   margin: 0.5rem;
+  transition: transform 0.2s ease-out;
+}
+
+.social-links a.rotate-left:hover {
+  transform: rotate(-20deg);
+}
+
+.social-links a.rotate-right:hover {
+  transform: rotate(20deg);
 }

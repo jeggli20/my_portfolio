@@ -3,7 +3,7 @@ import { useContext } from "react";
 import NavContext from "../../store/nav-context";
 import LightContext from "../../store/light-context";
 
-import classes from "./Hamburger.module.css";
+import "./Hamburger.css";
 
 const Hamburger = () => {
   const navCtx = useContext(NavContext);
@@ -11,9 +11,9 @@ const Hamburger = () => {
 
   return (
     <div
-      id={classes.hamburger}
-      className={`${navCtx.isClicked ? classes.open : ""} ${
-        lightCtx.isDark ? classes.dark : ""
+      id={"hamburger"}
+      className={`${navCtx.isClicked ? "open" : ""} ${
+        lightCtx.isDark ? "dark" : ""
       }`}
       onClick={navCtx.onClick}
     >

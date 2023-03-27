@@ -1,12 +1,22 @@
 @import "../../global.css";
 
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
 .project {
+  background-color: var(--primary-color-light);
   box-sizing: border-box;
   border-radius: 20px;
-  box-shadow: 3px 3px 10px var(--primary-color-light);
-  margin: 1rem 0;
+  box-shadow: 3px 3px 10px var(--primary-color);
+  flex: 1 0 50%;
+  margin: 1rem;
+  max-width: 480px;
   padding: 0.5rem;
-  width: 85%;
 }
 
 .project h4 {
@@ -34,4 +44,14 @@
   color: var(--primary-color);
   font-size: 2rem;
   margin: 0 0.5rem;
+}
+
+.project-icon:hover {
+  color: var(--white);
+}
+
+@media screen and (max-width: 969px) {
+  .project {
+    flex-basis: 85%;
+  }
 }

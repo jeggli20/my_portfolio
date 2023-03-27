@@ -1,25 +1,43 @@
 @import "../../global.css";
 
+.navbar {
+  border-right: 1px solid var(--primary-color);
+  display: flex;
+  flex-basis: 80%;
+  justify-content: flex-end;
+  margin-right: 2.5rem;
+  padding-right: 2rem;
+}
+
 .nav {
   list-style-type: none;
 }
 
-.nav-link:link {
+.nav-item {
+  display: inline;
+}
+
+.nav-link:link,
+.nav-link:visited {
   color: var(--primary-color);
-  font-size: 1.8rem;
+  font-size: 1.1rem;
   font-weight: bold;
+  margin: 0 1rem;
   text-decoration: none;
 }
 
-.nav-link:visited {
-  color: var(--primary-color);
-}
-
 .nav-link:hover {
-  color: var(--primary-color);
+  color: var(--primary-color-light);
 }
 
-@media screen and (max-width: 639px) {
+@media screen and (max-width: 969px) {
+  .nav-link:link,
+  .nav-link:visited {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 719px) {
   .nav {
     display: flex;
     flex-direction: column;
@@ -39,6 +57,10 @@
 
   .nav-item {
     margin: 1rem 0;
+  }
+
+  .nav-link:link {
+    font-size: 1.8rem;
   }
 
   .show {

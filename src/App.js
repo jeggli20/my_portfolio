@@ -1,12 +1,14 @@
 import { useContext } from "react";
+import { Outlet } from "react-router-dom";
 import LightContext from "./store/light-context";
 
-import Layout from "./components/layout/Layout";
-import About from "./components/sections/About";
-import WorkExperience from "./components/sections/WorkExperience";
-import Projects from "./components/sections/Projects";
-import Contact from "./components/sections/Contact";
+import { NavContextProvider } from "./store/nav-context";
 
+import Header from "./components/layout/Header";
+import Footer from "./components/layout/Footer";
+import Hamburger from "./components/UI/Hamburger";
+
+import "./App.css";
 import "./global.css";
 
 const App = () => {
@@ -14,12 +16,14 @@ const App = () => {
 
   return (
     <div className={`${lightCtx.isDark ? "dark-mode" : "light-mode"}`}>
-      <Layout>
-        <About />
-        <WorkExperience />
-        <Projects />
-        <Contact />
-      </Layout>
+      <NavContextProvider>
+        <Header />
+        <main>
+          <Outlet />
+          <Hamburger />
+        </main>
+        <Footer />
+      </NavContextProvider>
     </div>
   );
 };

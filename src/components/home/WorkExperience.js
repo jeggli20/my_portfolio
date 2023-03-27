@@ -23,21 +23,6 @@ const WorkExperience = () => {
         <Button id="job3" onClick={buttonHandler}>
           GEM Buildings
         </Button>
-        <Button id="job3" onClick={buttonHandler}>
-          Placeholder
-        </Button>
-        <Button id="job3" onClick={buttonHandler}>
-          Placeholder
-        </Button>
-        <Button id="job3" onClick={buttonHandler}>
-          Placeholder
-        </Button>
-        <Button id="job3" onClick={buttonHandler}>
-          Placeholder
-        </Button>
-        <Button id="job3" onClick={buttonHandler}>
-          Placeholder
-        </Button>
       </div>
       <div
         className={`${"job-description"} ${

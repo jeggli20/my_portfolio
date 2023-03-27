@@ -10,8 +10,8 @@ const Header = (props) => {
     <Fragment>
       <header>
         <img alt="Logo" className={"header-logo"} src={logo} />
-        <LightSwitch />
         <Navigation />
+        <LightSwitch />
       </header>
     </Fragment>
   );
