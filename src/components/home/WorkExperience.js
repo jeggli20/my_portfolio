@@ -46,7 +46,7 @@ const WorkExperience = () => {
       </div>
       <div
         className={`${"job-description"} ${
-          workId === "job2" ? "show" : "hidden"
+          workId === "job2" ? "work-show" : "work-hidden"
         }`}
       >
         <h4 className={"job-title"}>
@@ -70,7 +70,7 @@ const WorkExperience = () => {
       </div>
       <div
         className={`${"job-description"} ${
-          workId === "job3" ? "show" : "hidden"
+          workId === "job3" ? "work-show" : "work-hidden"
         }`}
       >
         <h4 className={"job-title"}>

@@ -8,6 +8,10 @@
   justify-content: center;
 }
 
+.error img {
+  width: 80px;
+}
+
 .error h6 {
   font-size: 4rem;
   margin: 1rem 0;

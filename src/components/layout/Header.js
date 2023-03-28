@@ -2,10 +2,10 @@ import { Fragment } from "react";
 
 import LightSwitch from "../UI/LightSwitch";
 import Navigation from "./Navigation";
-import logo from "../../img/logo1.png";
+import logo from "../../img/logo.png";
 import "./Header.css";
 
-const Header = (props) => {
+const Header = () => {
   return (
     <Fragment>
       <header>

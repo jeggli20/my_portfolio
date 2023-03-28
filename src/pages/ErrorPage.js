@@ -1,5 +1,7 @@
 import { useRouteError } from "react-router-dom";
 
+import logo from "../img/logo.png";
+
 import "./ErrorPage.css";
 
 const ErrorPage = () => {
@@ -12,6 +14,7 @@ const ErrorPage = () => {
         localStorage.getItem("isDark") === null ? "" : "dark-mode"
       }`}
     >
+      <img src={logo} alt="Logo" />
       <h6>Oops!</h6>
       <p>An unexpected error has occurred</p>
       <i>{error.statusText || error.message}</i>
