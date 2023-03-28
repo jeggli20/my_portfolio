@@ -17,6 +17,7 @@ export const NavContextProvider = (props) => {
 
   const navLinkHandler = () => {
     setIsHomePage(!isHomePage);
+    window.scrollTo(0, 0);
   };
 
   return (

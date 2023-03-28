@@ -13,15 +13,29 @@ const About = () => {
           <h2>Web Developer</h2>
         </div>
       </div>
-      <p className="about-text">
-        I am an aspiring Front-End Developer with prior interning experience and
-        in-depth customer service skills. Currently I am a student at
-        Bridgerland Technical College studying Web and Mobile Development. My
-        initial interest in web development stemmed from learning and
-        experimenting with HTML and CSS. Now my love and understanding for web
-        development have grown and I strive to continue to increase my skills
-        through daily work and practice.
-      </p>
+      <div className="about-text">
+        <p>
+          Hey everyone! My name is Jacob Eggli and I love developing
+          applications that live on the internet and on your phone. My interest
+          in web development started back when I was assigned to reconstruct the
+          intranet at a company I was interning at. Turns out I loved coding in
+          HTML and CSS. The web became a new canvas for me to express myself!
+        </p>
+        <p>
+          Now I am recently graduated from a technical college where I have
+          received formal education in web development. I've worked on many
+          projects and worked with&nbsp;
+          <a
+            href="https://perrymorrisinsurance.com"
+            target="_blank"
+            rel="noreferrer"
+          >
+            some clients along the way
+          </a>
+          . My interest in web development has only grown stronger and I embrace
+          all the new challenges that come my way.
+        </p>
+      </div>
     </section>
   );
 };

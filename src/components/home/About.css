@@ -48,9 +48,12 @@
 }
 
 .about-text {
-  font-size: 1.5rem;
   margin: 2rem 4rem;
   max-width: 700px;
+}
+
+.about-text p {
+  font-size: 1.5rem;
   text-align: justify;
 }
 
@@ -71,6 +74,9 @@
     margin: 0 2rem 2rem 2rem;
     padding-left: 1rem;
     padding-top: 0;
+  }
+
+  .about-text p {
     text-align: start;
   }
 }
@@ -85,6 +91,10 @@
     flex-direction: column;
   }
 
+  .about-title {
+    margin: 0 2rem;
+  }
+
   .about-title h1 {
     font-size: 3rem;
     margin: 1rem 0;
@@ -92,8 +102,11 @@
 
   .about-text {
     border: none;
+    margin: 1rem 2rem;
+  }
+
+  .about-text p {
     font-size: 1.1rem;
-    margin: 0 2rem;
   }
 
   .profile-border {

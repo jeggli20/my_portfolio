@@ -21,17 +21,17 @@ const Contact = () => {
         <form className={"contact-form"}>
           <div className={"form-row"}>
             <div className={"form-input multi-input"}>
-              <label for="fname">First Name</label>
+              <label htmlFor="fname">First Name</label>
               <input id="fname" name="fname" type="text" placeholder="John" />
             </div>
             <div className={"form-input multi-input"}>
-              <label for="lname">Last Name</label>
+              <label htmlFor="lname">Last Name</label>
               <input id="lname" name="lname" type="text" placeholder="Smith" />
             </div>
           </div>
           <div className={"form-row"}>
             <div className={"form-input multi-input"}>
-              <label for="email">Email</label>
+              <label htmlFor="email">Email</label>
               <input
                 id="email"
                 name="email"
@@ -40,7 +40,7 @@ const Contact = () => {
               />
             </div>
             <div className={"form-input multi-input"}>
-              <label for="phone">Phone Number</label>
+              <label htmlFor="phone">Phone Number</label>
               <input
                 id="phone"
                 name="phone"
@@ -51,7 +51,7 @@ const Contact = () => {
           </div>
           <div className={"form-row"}>
             <div className={"form-input single-input"}>
-              <label for="message">Short Message</label>
+              <label htmlFor="message">Short Message</label>
               <textarea
                 id="message"
                 name="message"

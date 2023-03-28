@@ -65,8 +65,13 @@ section {
   width: 100%;
 }
 
+a {
+  text-decoration: none;
+}
+
 a:hover {
   color: var(--primary-color-light);
+  text-decoration: underline;
 }
 
 .light-mode,

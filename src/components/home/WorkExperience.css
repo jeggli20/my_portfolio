@@ -45,7 +45,7 @@
 }
 
 span {
-  color: var(--darkest);
+  color: var(--primary-color-dark);
 }
 
 .job-list {
