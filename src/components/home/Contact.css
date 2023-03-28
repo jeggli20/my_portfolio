@@ -1,5 +1,63 @@
+@import "../../global.css";
+
 .section-content > a {
   text-align: center;
+}
+
+.section-content > p {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.contact-form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.multi-input {
+  width: 50%;
+}
+
+.single-input {
+  width: 100%;
+}
+
+.form-input {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem 1rem;
+}
+
+.form-input input,
+#message {
+  box-shadow: 2px 2px 10px inset var(--primary-color-dark);
+  font-size: 1.2rem;
+  padding: 0.25rem 1rem;
+}
+
+.form-input input {
+  height: 30px;
+}
+
+#message {
+  height: 100px;
+}
+
+.form-input input:focus,
+#message:focus {
+  background-color: var(--primary-color-light);
+}
+
+.submit {
+  margin: 0.5rem 0;
 }
 
 .social-links {
@@ -20,4 +78,15 @@
 
 .social-links a.rotate-right:hover {
   transform: rotate(20deg);
+}
+
+@media screen and (max-width: 719px) {
+  .form-row {
+    flex-direction: column;
+  }
+
+  .form-input {
+    margin: 1rem 0;
+    width: 100%;
+  }
 }

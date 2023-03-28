@@ -5,15 +5,64 @@ import {
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 
+import Button from "../UI/Button";
 import "./Contact.css";
 
 const Contact = () => {
+  const submitHandler = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <section id="contact" className={"contact-section"}>
-      <h3 className={"section-title"}>Contact Me</h3>
+      <h3 className={"section-title"}>Contact Me (Under Construction)</h3>
       <div className={"section-content"}>
-        <p>Send me an email or get in contact with me through social media!</p>
-        {/* <Button>Quick Message?</Button> */}
+        <p>Send me a message or get in contact with me through social media!</p>
+        <form className={"contact-form"}>
+          <div className={"form-row"}>
+            <div className={"form-input multi-input"}>
+              <label for="fname">First Name</label>
+              <input id="fname" name="fname" type="text" placeholder="John" />
+            </div>
+            <div className={"form-input multi-input"}>
+              <label for="lname">Last Name</label>
+              <input id="lname" name="lname" type="text" placeholder="Smith" />
+            </div>
+          </div>
+          <div className={"form-row"}>
+            <div className={"form-input multi-input"}>
+              <label for="email">Email</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="jsmith@example.com"
+              />
+            </div>
+            <div className={"form-input multi-input"}>
+              <label for="phone">Phone Number</label>
+              <input
+                id="phone"
+                name="phone"
+                type="text"
+                placeholder="xxx-xxx-xxxx"
+              />
+            </div>
+          </div>
+          <div className={"form-row"}>
+            <div className={"form-input single-input"}>
+              <label for="message">Short Message</label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Must be at least 10 characters..."
+              />
+            </div>
+          </div>
+          <Button className={"submit"} type="submit" onClick={submitHandler}>
+            Submit
+          </Button>
+        </form>
         <div className={"social-links"}>
           <a
             href="https://github.com/jeggli20"
@@ -40,7 +89,6 @@ const Contact = () => {
             <FontAwesomeIcon icon={faLinkedin} />
           </a>
         </div>
-        <a href="mailto:jacob@egglis.com">jacob@egglis.com</a>
       </div>
     </section>
   );

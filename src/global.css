@@ -40,14 +40,17 @@ h3,
 h4,
 h5,
 h6,
-a {
+a,
+label {
   color: var(--primary-color);
   font-family: "Cousine", monospace;
 }
 
 p,
 span,
-li {
+li,
+input,
+textarea {
   color: var(--primary-color-dark);
   font-family: "Raleway", sans-serif;
 }
@@ -99,24 +102,28 @@ a:hover {
 .dark-mode h2,
 .dark-mode h3,
 .dark-mode h4,
-.dark-mode h6,
-.dark-mode a {
+.dark-mode h6 {
   color: var(--secondary-color-light);
 }
 
 .dark-mode a:hover {
-  color: var(--secondary-color);
+  color: var(--secondary-color-light);
 }
 
 .dark-mode span,
-.dark-mode h5 {
-  color: var(--secondary-color) !important;
+.dark-mode h5,
+.dark-mode p,
+.dark-mode a,
+.dark-mode li,
+.dark-mode label,
+.dark-mode input,
+.dark-mode textarea {
+  color: var(--secondary-color);
 }
 
-.dark-mode p,
-.dark-mode li {
-  color: var(--secondary-color);
-  font-family: "Raleway", sans-serif;
+.dark-mode .form-input input:focus,
+.dark-mode #message:focus {
+  background-color: var(--secondary-color-light);
 }
 
 .dark-mode .section-title {
