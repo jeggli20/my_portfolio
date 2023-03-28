@@ -14,6 +14,11 @@ html {
 }
 
 body {
+  background-image: linear-gradient(
+    to bottom right,
+    var(--primary-color-dark),
+    var(--secondary-color-dark)
+  );
   margin: 0;
 }
 
@@ -53,12 +58,18 @@ section {
   flex-direction: column;
   justify-content: center;
   margin-bottom: 3rem;
-  scroll-margin: 85px;
+  scroll-margin: 110px;
   width: 100%;
 }
 
 a:hover {
   color: var(--primary-color-light);
+}
+
+.light-mode,
+.dark-mode {
+  margin: 0 auto;
+  max-width: 1300px;
 }
 
 .section-title {
@@ -76,7 +87,14 @@ a:hover {
   padding: 0 2rem;
 }
 
+@media screen and (max-width: 719px) {
+  section {
+    scroll-margin: 85px;
+  }
+}
+
 /** ================= Dark Mode ================= */
+
 .dark-mode h1,
 .dark-mode h2,
 .dark-mode h3,
@@ -113,6 +131,10 @@ a:hover {
 }
 
 /* ================= Navigation ================= */
+.dark-mode .navbar {
+  border-color: var(--secondary-color-light);
+}
+
 .dark-mode .nav-link:visited,
 .dark-mode .nav-link:link {
   color: var(--secondary-color);
@@ -149,6 +171,7 @@ a:hover {
 /* ================= Work Experience ================= */
 .dark-mode .work-tabs {
   background-color: var(--secondary-color-light);
+  box-shadow: 0 0 10px inset var(--secondary-color-dark);
 }
 
 .dark-mode .work-tabs::-webkit-scrollbar-track {
@@ -200,7 +223,11 @@ a:hover {
 .dark-mode .btn {
   background-color: var(--secondary-color-dark);
   border-color: var(--secondary-color);
-  color: var(--secondary-color-light);
+  color: var(--secondary-color);
+}
+
+.dark-mode .btn:hover {
+  background-color: var(--secondary-color-light);
 }
 
 @media screen and (max-width: 719px) {

@@ -26,7 +26,7 @@ const WorkExperience = () => {
       </div>
       <div
         className={`${"job-description"} ${
-          workId === "job1" ? "show" : "hidden"
+          workId === "job1" ? "work-show" : "work-hidden"
         }`}
       >
         <h4 className={"job-title"}>

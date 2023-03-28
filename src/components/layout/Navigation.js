@@ -6,7 +6,6 @@ import "./Navigation.css";
 
 const Navigation = () => {
   const navCtx = useContext(NavContext);
-  const pathname = window.location.pathname;
 
   const homeNav = (
     <Fragment>
@@ -17,7 +16,7 @@ const Navigation = () => {
       </li>
       <li className={"nav-item"}>
         <a className={"nav-link"} href="#work">
-          Work Experience
+          Work&nbsp;Experience
         </a>
       </li>
       <li className={"nav-item"}>
@@ -35,7 +34,7 @@ const Navigation = () => {
 
   const projectsNav = (
     <li className={"nav-item"}>
-      <Link to="/home" className={"nav-link"}>
+      <Link to="/" className={"nav-link"} onClick={navCtx.onPageChange}>
         Home
       </Link>
     </li>
@@ -44,8 +43,8 @@ const Navigation = () => {
   return (
     <nav className={"navbar"}>
       <ul className={`nav ${navCtx.isClicked ? "show" : ""}`}>
-        {pathname === "/home" && homeNav}
-        {pathname === "/projects" && projectsNav}
+        {navCtx.isHomePage && homeNav}
+        {!navCtx.isHomePage && projectsNav}
       </ul>
     </nav>
   );

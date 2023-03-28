@@ -1,3 +1,4 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -5,10 +6,13 @@ import { faGithubSquare } from "@fortawesome/free-brands-svg-icons";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 
 import "./Projects.css";
+import NavContext from "../../store/nav-context";
 
 const Projects = () => {
+  const navCtx = useContext(NavContext);
+
   return (
-    <section id="projects-container" className={"project-section"}>
+    <section id="projects" className={"project-section"}>
       <h3 className={"section-title"}>Projects</h3>
       <div className="projects">
         <div className={"project"}>
@@ -65,7 +69,7 @@ const Projects = () => {
           </a>
         </div>
       </div>
-      <Link to={`/projects`}>
+      <Link to={`/projects`} onClick={navCtx.onPageChange}>
         See full archive&nbsp;
         <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
       </Link>

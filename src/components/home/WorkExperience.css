@@ -26,12 +26,12 @@
   border-radius: 5px;
 }
 
-.show {
+.work-show {
   display: flex;
   flex-direction: column;
 }
 
-.hidden {
+.work-hidden {
   display: none;
 }
 
