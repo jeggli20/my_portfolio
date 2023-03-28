@@ -11,7 +11,7 @@ const ErrorPage = () => {
   return (
     <div
       className={`error ${
-        localStorage.getItem("isDark") === null ? "" : "dark-mode"
+        localStorage.getItem("isDark") === null ? "light-mode" : "dark-mode"
       }`}
     >
       <img src={logo} alt="Logo" />
