@@ -17,9 +17,10 @@ const About = () => {
         <p>
           Hey everyone! My name is Jacob Eggli and I love developing
           applications that live on the internet and on your phone. My interest
-          in web development started back when I was assigned to reconstruct the
-          intranet at a company I was interning at. Turns out I loved coding in
-          HTML and CSS. The web became a new canvas for me to express myself!
+          in web development started back when, as an intern of a small company,
+          I was assigned to reconstruct their intranet. That was the moment that
+          I found out I love to code. The web became a new canvas for me to
+          express myself!
         </p>
         <p>
           Now I am recently graduated from a technical college where I have

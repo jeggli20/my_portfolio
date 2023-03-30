@@ -1,94 +1,42 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faGithubSquare,
-  faFacebookSquare,
-  faLinkedin,
-} from "@fortawesome/free-brands-svg-icons";
+import { useContext } from "react";
+import FormContext from "../../store/form-context";
 
-import Button from "../UI/Button";
+import Form from "../UI/Form";
 import "./Contact.css";
 
 const Contact = () => {
-  const submitHandler = (e) => {
-    e.preventDefault();
-  };
+  const formCtx = useContext(FormContext);
+
+  const formContent = (
+    <h4>Send me a message or connect with me on social media!</h4>
+  );
+
+  const submittingContent = <h4>Hold on while I retrieve your message...</h4>;
+
+  const completeContent = (
+    <h4>I got your message! You should receive an email here shortly.</h4>
+  );
+
+  const errorContent = <h4>An unexpected error has occurred!</h4>;
 
   return (
     <section id="contact" className={"contact-section"}>
       <h3 className={"section-title"}>Contact Me (Under Construction)</h3>
       <div className={"section-content"}>
-        <p>Send me a message or get in contact with me through social media!</p>
-        <form className={"contact-form"}>
-          <div className={"form-row"}>
-            <div className={"form-input multi-input"}>
-              <label htmlFor="fname">First Name</label>
-              <input id="fname" name="fname" type="text" placeholder="John" />
-            </div>
-            <div className={"form-input multi-input"}>
-              <label htmlFor="lname">Last Name</label>
-              <input id="lname" name="lname" type="text" placeholder="Smith" />
-            </div>
-          </div>
-          <div className={"form-row"}>
-            <div className={"form-input multi-input"}>
-              <label htmlFor="email">Email</label>
-              <input
-                id="email"
-                name="email"
-                type="email"
-                placeholder="jsmith@example.com"
-              />
-            </div>
-            <div className={"form-input multi-input"}>
-              <label htmlFor="phone">Phone Number</label>
-              <input
-                id="phone"
-                name="phone"
-                type="text"
-                placeholder="xxx-xxx-xxxx"
-              />
-            </div>
-          </div>
-          <div className={"form-row"}>
-            <div className={"form-input single-input"}>
-              <label htmlFor="message">Short Message</label>
-              <textarea
-                id="message"
-                name="message"
-                placeholder="Must be at least 10 characters..."
-              />
-            </div>
-          </div>
-          <Button className={"submit"} type="submit" onClick={submitHandler}>
-            Submit
-          </Button>
-        </form>
-        <div className={"social-links"}>
-          <a
-            href="https://github.com/jeggli20"
-            target="_blank"
-            rel="noreferrer"
-            className={"rotate-left"}
-          >
-            <FontAwesomeIcon icon={faGithubSquare} />
-          </a>
-          <a
-            href="https://facebook.com/jacob.eggli.3/"
-            target="_blank"
-            rel="noreferrer"
-            className={"rotate-right"}
-          >
-            <FontAwesomeIcon icon={faFacebookSquare} />
-          </a>
-          <a
-            href="https://linkedin.com/in/jeggli20"
-            target="_blank"
-            rel="noreferrer"
-            className={"rotate-left"}
-          >
-            <FontAwesomeIcon icon={faLinkedin} />
-          </a>
-        </div>
+        {!formCtx.isSubmitting &&
+          !formCtx.isComplete &&
+          !formCtx.isError &&
+          formContent}
+        {formCtx.isSubmitting &&
+          !formCtx.isComplete &&
+          !formCtx.isError &&
+          submittingContent}
+        {!formCtx.isSubmitting &&
+          formCtx.isComplete &&
+          !formCtx.isError &&
+          completeContent}
+        {formCtx.isError && errorContent}
+        <Form />
       </div>
     </section>
   );

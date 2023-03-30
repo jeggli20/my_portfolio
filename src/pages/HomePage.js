@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { FormContextProvider } from "../store/form-context";
 
 import About from "../components/home/About";
 import WorkExperience from "../components/home/WorkExperience";
@@ -7,12 +7,12 @@ import Contact from "../components/home/Contact";
 
 const HomePage = () => {
   return (
-    <Fragment>
+    <FormContextProvider>
       <About />
       <WorkExperience />
       <Projects />
       <Contact />
-    </Fragment>
+    </FormContextProvider>
   );
 };
 

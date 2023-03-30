@@ -80,6 +80,7 @@ a:hover {
 
 .light-mode,
 .dark-mode {
+  box-sizing: border-box;
   margin: 0 auto;
   max-width: 1300px;
 }
@@ -96,7 +97,7 @@ a:hover {
 .section-content {
   display: flex;
   flex-direction: column;
-  padding: 0 2rem;
+  margin: 0 2rem;
 }
 
 @media screen and (max-width: 719px) {
@@ -219,6 +220,21 @@ a:hover {
 
 .dark-mode hr {
   border-color: var(--secondary-color) !important;
+}
+
+/* ================= Contact ================= */
+.dark-mode .message-length {
+  color: var(--secondary-color);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.dark-mode .invalid {
+  color: red;
+}
+
+.dark-mode .invalid-text {
+  color: red;
 }
 
 /* ================= Footer ================= */
