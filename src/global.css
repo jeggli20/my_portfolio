@@ -74,6 +74,10 @@ a:hover {
   text-decoration: underline;
 }
 
+.light-mode {
+  box-shadow: 0 0 15px var(--primary-color);
+}
+
 .light-mode,
 .dark-mode {
   margin: 0 auto;
@@ -102,6 +106,9 @@ a:hover {
 }
 
 /** ================= Dark Mode ================= */
+.dark-mode {
+  box-shadow: 0 0 15px var(--secondary-color);
+}
 
 .dark-mode h1,
 .dark-mode h2,
