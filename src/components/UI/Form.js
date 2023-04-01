@@ -23,12 +23,16 @@ const isString = (value) => {
   return letters.test(value);
 };
 
+const messageLength = (string) => {
+  return string.split(" ").join("").length;
+};
+
 let msgError;
-const msgLength = (value) => {
-  if (value.trim().length < 10) {
+const validMessage = (value) => {
+  if (messageLength(value) < 10) {
     msgError = "Your message should be at least 10 characters";
     return false;
-  } else if (value.trim().length > 250) {
+  } else if (messageLength(value) > 250) {
     msgError = "Your message should be less than 250 characters";
     return false;
   } else {
@@ -83,7 +87,7 @@ const Form = () => {
     valueChangeHandler: messageChangeHandler,
     valueBlurHandler: messageBlurHandler,
     reset: resetMessage,
-  } = useInput(msgLength);
+  } = useInput(validMessage);
 
   let formIsValid = false;
 
@@ -96,12 +100,47 @@ const Form = () => {
     formIsValid = true;
   }
 
-  const submitHandler = (e) => {
+  const submitHandler = async (e) => {
     e.preventDefault();
+
+    if (!formIsValid) {
+      return;
+    }
+
+    formCtx.submittingHandler();
+    await fetch("https://www.jacobeggli.com/send", {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify({
+        name: `${enteredFirstName}  ${enteredLastName}`,
+        email: enteredEmail,
+        message: enteredMessage,
+      }),
+    })
+      .then((res) => res.json())
+      .then(async (res) => {
+        const resData = await res;
+        console.log(resData);
+        if (resData.status === "success") {
+          formCtx.completionHandler();
+        } else if (resData.status === "fail") {
+          formCtx.errorHandler();
+        }
+        resetFirstName();
+        resetLastName();
+        resetEmail();
+        resetMessage();
+      });
+  };
+
+  const newFormHandler = () => {
+    formCtx.newForm();
   };
 
   const formContent = (
-    <form className={"contact-form"}>
+    <form className={"contact-form"} method="POST">
       <div className={"form-row"}>
         <div className={"form-input multi-input"}>
           <label htmlFor="fname">First Name</label>
@@ -165,12 +204,10 @@ const Form = () => {
           />
         </div>
       </div>
-      <div className={"message-length"}>{enteredMessage.trim().length}/250</div>
-      {messageHasError && (
-        <p className={"invalid-text"}>{`${
-          msgError || "Please write a message between 10 and 250 characters"
-        }`}</p>
-      )}
+      <div className={"message-length"}>
+        {messageLength(enteredMessage)}/250
+      </div>
+      {messageHasError && <p className={"invalid-text"}>{msgError}</p>}
       <Button className={"submit"} type="submit" onClick={submitHandler}>
         Submit
       </Button>
@@ -205,9 +242,9 @@ const Form = () => {
 
   const sendingContent = (
     <div className={"loader"}>
-      <div className={`"circle" "ball-1"`}></div>
-      <div className={`"circle" "ball-2"`}></div>
-      <div className={`"circle" "ball-3"`}></div>
+      <div className={"square square-1"}></div>
+      <div className={"square square-2"}></div>
+      <div className={"square square-3"}></div>
     </div>
   );
 
@@ -220,7 +257,7 @@ const Form = () => {
   const errorContent = (
     <Fragment>
       <h3 className={"errorHeader"}>{`${formCtx.errMsg}`}</h3>
-      <Button type="button" onClick={formCtx.resetForm}>
+      <Button type="button" onClick={newFormHandler}>
         Try again?
       </Button>
     </Fragment>

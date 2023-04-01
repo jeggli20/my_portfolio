@@ -4,7 +4,6 @@ const FormContext = createContext({
   isSubmitting: false,
   isComplete: false,
   isError: false,
-  newForm: false,
   errMsg: "",
   submittingHandler: () => {},
   completionHandler: () => {},
@@ -18,10 +17,7 @@ export const FormContextProvider = (props) => {
   const [isError, setIsError] = useState(false);
   const [errMsg, setErrMsg] = useState("");
 
-  let newForm;
-
   const submittingHandler = () => {
-    newForm = false;
     setIsSubmitting(true);
     setIsComplete(false);
   };
@@ -42,7 +38,6 @@ export const FormContextProvider = (props) => {
     setIsSubmitting(false);
     setIsComplete(false);
     setIsError(false);
-    newForm = true;
   };
 
   return (
@@ -51,7 +46,6 @@ export const FormContextProvider = (props) => {
         isSubmitting,
         isComplete,
         isError,
-        newForm,
         errMsg,
         submittingHandler,
         completionHandler,

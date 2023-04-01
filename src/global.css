@@ -229,6 +229,10 @@ a:hover {
   font-weight: bold;
 }
 
+.dark-mode .square {
+  background-color: var(--secondary-color);
+}
+
 .dark-mode .invalid {
   color: red;
 }

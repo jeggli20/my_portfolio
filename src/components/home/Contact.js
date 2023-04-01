@@ -14,7 +14,7 @@ const Contact = () => {
   const submittingContent = <h4>Hold on while I retrieve your message...</h4>;
 
   const completeContent = (
-    <h4>I got your message! You should receive an email here shortly.</h4>
+    <h4>I got your message! I will be in contact with you soon.</h4>
   );
 
   const errorContent = <h4>An unexpected error has occurred!</h4>;
