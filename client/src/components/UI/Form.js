@@ -108,7 +108,7 @@ const Form = () => {
     }
 
     formCtx.submittingHandler();
-    await fetch("https://www.jacobeggli.com/send", {
+    await fetch("https://www.jacobeggli.com/email", {
       method: "POST",
       headers: {
         "Content-type": "application/json",
