@@ -7,6 +7,7 @@ import {
   faFacebookSquare,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
+import env from "react-dotenv";
 
 import Button from "../UI/Button";
 import "./Form.css";
@@ -108,7 +109,7 @@ const Form = () => {
     }
 
     formCtx.submittingHandler();
-    await fetch("https://www.jacobeggli.com/email", {
+    await fetch(env.EMAIL_URL, {
       method: "POST",
       headers: {
         "Content-type": "application/json",
