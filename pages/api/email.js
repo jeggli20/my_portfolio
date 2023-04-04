@@ -25,7 +25,7 @@ const handler = async (req, res) => {
 
       console.log("Mail Options Set");
 
-      transporter.sendMail(mailOptions);
+      await transporter.sendMail(mailOptions);
     }
   } catch (error) {
     res.status(500).send({ status: "fail" });
