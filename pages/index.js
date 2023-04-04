@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import { FormContextProvider } from "../context/form-context";
 
-import Head from "next/Head";
+import Head from "next/head";
 import About from "../components/home/About";
 import WorkExperience from "../components/home/WorkExperience";
 import Projects from "../components/home/Projects";
