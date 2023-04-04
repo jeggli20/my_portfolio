@@ -1,4 +1,4 @@
-import Image from "next/Image";
+import Image from "next/image";
 
 import profile from "../../img/profile.jpg";
 import classes from "./About.module.css";

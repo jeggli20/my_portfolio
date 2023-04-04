@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import Image from "next/Image";
+import Image from "next/image";
 
 import LightSwitch from "../UI/LightSwitch";
 import Navigation from "./Navigation";

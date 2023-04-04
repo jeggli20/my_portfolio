@@ -1,5 +1,5 @@
 import { Fragment, useContext } from "react";
-import Link from "next/Link";
+import Link from "next/link";
 
 import NavContext from "../../context/nav-context";
 import classes from "./Navigation.module.css";
