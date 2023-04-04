@@ -35,8 +35,8 @@ const Navigation = () => {
   const projectsNav = (
     <li className={classes["nav-item"]}>
       <Link
-        to="/"
-        className={classes["nav-link"]}
+        href="/"
+        className={`dm-nav-link ${classes["nav-link"]}`}
         onClick={navCtx.onPageChange}
       >
         Home

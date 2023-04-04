@@ -104,11 +104,9 @@ const Form = () => {
     formCtx.submittingHandler();
     await fetch("/api/email", {
       method: "POST",
-      headers: {
-        "Content-type": "application/json",
-      },
       body: JSON.stringify({
-        name: `${enteredFirstName}  ${enteredLastName}`,
+        fName: capitalize(enteredFirstName),
+        lName: capitalize(enteredLastName),
         email: enteredEmail,
         message: enteredMessage,
       }),
@@ -147,10 +145,10 @@ const Form = () => {
         <div
           className={`dm-form-input ${classes["form-input"]} ${classes["multi-input"]}`}
         >
-          <label htmlFor="fname">First Name</label>
+          <label htmlFor="fName">First Name</label>
           <input
-            id="fname"
-            name="fname"
+            id="fName"
+            name="fName"
             type="text"
             placeholder="John"
             value={capitalize(enteredFirstName)}
@@ -162,10 +160,10 @@ const Form = () => {
         <div
           className={`dm-form-input ${classes["form-input"]} ${classes["multi-input"]}`}
         >
-          <label htmlFor="lname">Last Name</label>
+          <label htmlFor="lName">Last Name</label>
           <input
-            id="lname"
-            name="lname"
+            id="lName"
+            name="lName"
             type="text"
             placeholder="Smith"
             value={capitalize(enteredLastName)}

@@ -22,7 +22,7 @@ const Contact = () => {
   return (
     <section id="contact" className={classes["contact-section"]}>
       <h3 className={`dm-section-title ${classes["section-title"]}`}>
-        Contact Me (Under Construction)
+        Contact Me
       </h3>
       <div className={classes["section-content"]}>
         {!formCtx.isSubmitting &&
