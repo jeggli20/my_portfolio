@@ -1,0 +1,14 @@
+.section-content {
+  display: flex;
+  flex-direction: column;
+  margin: 0 2rem;
+}
+
+.section-content > a {
+  text-align: center;
+}
+
+.section-content > h4 {
+  font-size: 1.5rem;
+  text-align: center;
+}

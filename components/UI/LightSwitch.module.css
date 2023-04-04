@@ -1,0 +1,21 @@
+.light-switch {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 2rem 1rem auto;
+}
+
+.lightbulb {
+  width: 2rem;
+}
+
+.off {
+  color: var(--black);
+  filter: drop-shadow(0 0px 3px var(--secondary-color-light));
+}
+
+.on {
+  color: var(--white);
+  filter: drop-shadow(0 0px 3px var(--primary-color));
+}
