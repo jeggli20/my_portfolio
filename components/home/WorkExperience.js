@@ -16,15 +16,42 @@ const WorkExperience = () => {
         Work Experience
       </h3>
       <div className={`dm-work-tabs ${classes["work-tabs"]}`}>
-        <Button id="job1" onClick={buttonHandler}>
-          GEM Buildings
-        </Button>
         <Button id="job2" onClick={buttonHandler}>
           Bridgerland Tech
+        </Button>
+        <Button id="job1" onClick={buttonHandler}>
+          GEM Buildings
         </Button>
         <Button id="job3" onClick={buttonHandler}>
           GEM Buildings
         </Button>
+      </div>
+      <div
+        className={`${classes["job-description"]} ${
+          workId === "job2" ? classes["work-show"] : classes["work-hidden"]
+        }`}
+      >
+        <h4 className={classes["job-title"]}>
+          Student Full Stack Web Developer{" "}
+          <span>@&nbsp;Bridgerland&nbsp;Technical&nbsp;College</span>
+        </h4>
+        <span className={`${classes["job-date"]} ${classes.emphasis}`}>
+          Oct 2022 - March 2023
+        </span>
+        <ul className={classes["job-list"]}>
+          <li>
+            Developed a responsive website for an insurance agency using Next
+            enhancing customer experience
+          </li>
+          <li>
+            Designed an API to automate email notifications for all involved
+            parties
+          </li>
+          <li>
+            Collaborated effectively with team members, ensuring clear
+            communication and efficient role distribution
+          </li>
+        </ul>
       </div>
       <div
         className={`${classes["job-description"]} ${
@@ -39,38 +66,12 @@ const WorkExperience = () => {
         </span>
         <ul className={classes["job-list"]}>
           <li>
-            Developed a PHP and SQL driven employee directory application to
-            help improve the efficiency of the company
+            Developed PHP and MS SQL driven employee directory application
+            resulting in an increase of company efficiency
           </li>
           <li>
-            In development and implementation, set up a relational database to
-            efficiently organize data in a cohesive and straightforward manner
-          </li>
-        </ul>
-      </div>
-      <div
-        className={`${classes["job-description"]} ${
-          workId === "job2" ? classes["work-show"] : classes["work-hidden"]
-        }`}
-      >
-        <h4 className={classes["job-title"]}>
-          Student Full Stack Web Developer{" "}
-          <span>@&nbsp;Bridgerland&nbsp;Technical&nbsp;College</span>
-        </h4>
-        <span className={`${classes["job-date"]} ${classes.emphasis}`}>
-          Oct 2022 - Ongoing
-        </span>
-        <ul className={classes["job-list"]}>
-          <li>
-            Developed website for insurance agency, Perry Morris Insurance,
-            using NextJS to provide customers a reactive experience. Led
-            specifically in form submission development resulting in emails sent
-            to all parties
-          </li>
-          <li>
-            Collaborated in a team setting where roles were distributed out and
-            communication maintained through entire development process creating
-            a cohesive and precise team experience
+            Created a relational database to efficiently organize employee data
+            in a cohesive and straightforward manner
           </li>
         </ul>
       </div>
@@ -87,13 +88,13 @@ const WorkExperience = () => {
         </span>
         <ul className={classes["job-list"]}>
           <li>
-            Worked with Systems Administrator to troubleshoot issues, answer
-            inquiries, and update software helping over 150 employees work
-            efficiently
+            Collaborated with Systems Administrator to troubleshoot issues,
+            answer inquiries, and update software helping over 150 employees
+            have a streamline work experience
           </li>
           <li>
-            Redesigned and developed company intranet using HTML and CSS,
-            modernizing and increasing company functionality
+            Redesigned and improved company intranet using HTML and CSS,
+            creating a modern and more functional experience for employees
           </li>
         </ul>
       </div>
