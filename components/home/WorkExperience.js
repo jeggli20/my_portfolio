@@ -16,10 +16,10 @@ const WorkExperience = () => {
         Work Experience
       </h3>
       <div className={`dm-work-tabs ${classes["work-tabs"]}`}>
-        <Button id="job2" onClick={buttonHandler}>
+        <Button id="job1" onClick={buttonHandler}>
           Bridgerland Tech
         </Button>
-        <Button id="job1" onClick={buttonHandler}>
+        <Button id="job2" onClick={buttonHandler}>
           GEM Buildings
         </Button>
         <Button id="job3" onClick={buttonHandler}>
@@ -28,7 +28,7 @@ const WorkExperience = () => {
       </div>
       <div
         className={`${classes["job-description"]} ${
-          workId === "job2" ? classes["work-show"] : classes["work-hidden"]
+          workId === "job1" ? classes["work-show"] : classes["work-hidden"]
         }`}
       >
         <h4 className={classes["job-title"]}>
@@ -55,7 +55,7 @@ const WorkExperience = () => {
       </div>
       <div
         className={`${classes["job-description"]} ${
-          workId === "job1" ? classes["work-show"] : classes["work-hidden"]
+          workId === "job2" ? classes["work-show"] : classes["work-hidden"]
         }`}
       >
         <h4 className={classes["job-title"]}>
