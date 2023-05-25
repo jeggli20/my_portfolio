@@ -14,11 +14,7 @@ html {
 }
 
 body {
-  background-image: linear-gradient(
-    to bottom right,
-    var(--primary-color-dark),
-    var(--secondary-color-dark)
-  );
+  background-color: var(--white);
   margin: 0;
 }
 
@@ -79,7 +75,7 @@ a:hover {
 }
 
 .light-mode {
-  box-shadow: 0 0 15px var(--primary-color);
+  box-shadow: -10px 5px 100px var(--black), 0 0 15px var(--primary-color);
 }
 
 .light-mode,
@@ -99,8 +95,12 @@ section > h3 {
 }
 
 /** ================= Dark Mode ================= */
+body:has(.dark-mode) {
+  background-color: #404040;
+}
+
 .dark-mode {
-  box-shadow: 0 0 15px var(--secondary-color);
+  box-shadow: -10px 5px 100px var(--black), 0 0 15px var(--secondary-color);
 }
 
 .dark-mode h1,
@@ -154,7 +154,7 @@ section > h3 {
 
 .dark-mode .dm-nav-link:hover,
 .dark-mode .dm-nav-link:active {
-  color: var(--secondary-color-light);
+  text-shadow: 1px 1px var(--secondary-color-light);
 }
 
 /* ================= Layout ================= */

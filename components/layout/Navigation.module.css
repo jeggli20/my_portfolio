@@ -25,7 +25,7 @@
 }
 
 .nav-link:hover {
-  color: var(--primary-color-light);
+  text-shadow: 2px 2px var(--primary-color-light);
 }
 
 @media screen and (max-width: 969px) {
