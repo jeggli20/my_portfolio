@@ -19,7 +19,7 @@ body {
 }
 
 header {
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
 main {
@@ -87,7 +87,7 @@ a:hover {
 
 section > h3 {
   box-sizing: border-box;
-  box-shadow: 0 0 10px var(--primary-color);
+  box-shadow: 0 0 25px var(--primary-color);
   font-size: 1.8rem;
   margin: 0.5rem 0;
   padding: 0.5rem 1.5rem;
@@ -100,7 +100,7 @@ body:has(.dark-mode) {
 }
 
 .dark-mode {
-  box-shadow: -10px 5px 100px var(--black), 0 0 15px var(--secondary-color);
+  box-shadow: -10px 5px 100px var(--black), 0 0 30px var(--secondary-color);
 }
 
 .dark-mode h1,
@@ -132,14 +132,14 @@ body:has(.dark-mode) {
 }
 
 .dark-mode .dm-section-title {
-  box-shadow: 0 0 15px var(--secondary-color);
+  box-shadow: 0 0 25px var(--secondary-color);
   background-color: var(--black);
 }
 
 /* ================= Header ================= */
 .dark-mode header {
   background-color: rgba(0, 0, 0, 0.6);
-  box-shadow: 0px 0px 15px var(--secondary-color);
+  box-shadow: 0px 0px 30px var(--secondary-color);
 }
 
 /* ================= Navigation ================= */
@@ -228,7 +228,7 @@ body:has(.dark-mode) {
 /* ================= Footer ================= */
 .dark-mode footer {
   background-color: var(--black);
-  box-shadow: 0 0px 15px var(--secondary-color);
+  box-shadow: 0 0px 30px var(--secondary-color);
 }
 
 /* ================= Button ================= */

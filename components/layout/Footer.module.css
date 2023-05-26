@@ -1,6 +1,6 @@
 .container {
   align-items: center;
-  box-shadow: 0 0px 15px var(--primary-color);
+  box-shadow: 0 0px 30px var(--primary-color);
   display: flex;
   min-height: 50px;
   justify-content: center;

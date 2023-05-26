@@ -4,6 +4,12 @@ import FormContext from "../../context/form-context";
 
 import Button from "../UI/Button";
 import classes from "./Form.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faGithubSquare,
+  faFacebookSquare,
+  faLinkedin,
+} from "@fortawesome/free-brands-svg-icons";
 
 /* ====== Validation ====== */
 const isNotEmpty = (value) => String(value).trim() !== "";
@@ -229,19 +235,25 @@ const Form = () => {
           target="_blank"
           rel="noreferrer"
           className={classes["rotate-left"]}
-        ></a>
+        >
+          <FontAwesomeIcon icon={faGithubSquare} />
+        </a>
         <a
           href="https://facebook.com/jacob.eggli.3/"
           target="_blank"
           rel="noreferrer"
           className={classes["rotate-right"]}
-        ></a>
+        >
+          <FontAwesomeIcon icon={faFacebookSquare} />
+        </a>
         <a
           href="https://linkedin.com/in/jeggli20"
           target="_blank"
           rel="noreferrer"
           className={classes["rotate-left"]}
-        ></a>
+        >
+          <FontAwesomeIcon icon={faLinkedin} />
+        </a>
       </div>
     </form>
   );
