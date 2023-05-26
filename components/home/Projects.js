@@ -70,7 +70,7 @@ const Projects = () => {
           <p>A data API for the board game Wingspan using Laravel</p>
           <div className={"project-icons"}>
             <a
-              href="https://github.com/jeggli20/employee_directory_application"
+              href="https://github.com/jeggli20/wingspan_api"
               target="_blank"
               rel="noreferrer"
               className={`dm-project-icon ${classes["project-icon"]}`}
